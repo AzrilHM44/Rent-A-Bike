@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- rentabik.kelompoksepeda tree view -->
+    <record id="rentabik_kelompoksepeda_view_tree" model="ir.ui.view">
+        <field name="name">rentabik.kelompoksepeda.view.tree</field>
+        <field name="model">rentabik.kelompoksepeda</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_sewa"/>
+                <field name="jml_item"/>
+                <field name="daftar"></field>
+            </tree>
+        </field>
+    </record>
+    <!-- rentabik.kelompoksepeda form view -->
+    <record id="rentabik_kelompoksepeda_view_form" model="ir.ui.view">
+        <field name="name">rentabik.kelompoksepeda.view.form</field>
+        <field name="model">rentabik.kelompoksepeda</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group name="kelompok" string="Letak Kelompok">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                        <field name="jml_item"/>   
+                    </group>
+                    <group name="sewa" string="Jenis sepeda">
+                        <field name="kode_sewa"/>
+                        <field name="kendaraan_ids"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- rentabik.kelompoksepeda action window -->
+    <record id="rentabik_kelompoksepeda_action" model="ir.actions.act_window">
+        <field name="name">Kelompok sepeda</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rentabik.kelompoksepeda</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="rentabik_kelompoksepeda_menu_act" name="Kelompok sepeda" parent="rentabik_kendaraan_menu_categ" action="rentabik_kelompoksepeda_action" sequence="10"/>
+</odoo>

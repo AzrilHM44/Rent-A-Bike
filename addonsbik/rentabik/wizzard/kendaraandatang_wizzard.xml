@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="kendaraan_datang_view_form_wizzard" model="ir.ui.view">
+        <field name="name">Kedatangan kendaraan</field>
+        <field name="model">rentabik.kendaraandatang</field>
+        <field name="arch" type="xml">
+            <form string="Form Kedatangan kendaraan">
+                <group>
+                    <field name="kendaraan_id"/>
+                    <field name="jumlah"/>
+                </group>
+                <footer>
+                    <button name="button_kendaraan_datang" type="object" string="Input kendaraan" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="kendaraan_datang_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Kedatangan kendaraan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rentabik.kendaraandatang</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="kendaraan_datang_view_form_wizzard"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="kendaraan_datang_menu_action_wizzard"
+              name="Input kendaraan"
+              parent="rentabik_menu_root"
+              action="kendaraan_datang_action_wizzard"
+              sequence="48"/>
+</odoo>

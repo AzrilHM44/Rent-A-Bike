@@ -1,0 +1,31 @@
+<odoo>
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Supplier Excel</field>
+        <field name="model">rentabik.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">rentabik.report_supplier_xlsx</field>
+        <field name="report_file">rentabik.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_rentabik_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_penjualan_pdf" model="ir.actions.report">
+        <field name="name">Faktur PDF</field>
+        <field name="model">rentabik.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rentabik.report_penjualan_pdf</field>
+        <field name="report_file">rentabik.report_penjualan_pdf</field>
+        <field name="binding_model_id" ref="model_rentabik_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="wizzard_penjualanreport_pdf" model="ir.actions.report">
+        <field name="name">Print Report</field>
+        <field name="model">rentabik.penjualanreport</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rentabik.wizzard_penjualanreport_pdf_tmp</field>
+        <field name="report_file">rentabik.wizzard_penjualanreport_pdf_tmp</field>
+        <field name="binding_model_id" ref="model_rentabik_penjualanreport"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

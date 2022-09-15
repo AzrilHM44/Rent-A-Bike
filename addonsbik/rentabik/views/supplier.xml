@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- rentabik.supplier tree view -->
+<record id="rentabik_supplier_tree" model="ir.ui.view">
+    <field name="name">Daftar Supplier</field>
+    <field name="model">rentabik.supplier</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="alamat"/>
+            <field name="no_telp"/>
+            <field name="kendaraan_id"/>            
+        </tree>
+    </field>
+</record>
+
+<!-- rentabik.supplier form view -->
+<record id="rentabik_supplier_form" model="ir.ui.view">
+    <field name="name">Form Supplier</field>
+    <field name="model">rentabik.supplier</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="alamat"/>
+                    <field name="no_telp"/>
+                </group>
+                <group name="kendaraan" string="Kendaraan">
+                    <field name="kendaraan_id"/>                    
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+    <!-- rentabik.supplier action window -->
+    <record id="rentabik_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rentabik.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="rentabik_supplier_menu_act" name="Supplier" parent="rentabik_menu_root" action="rentabik_supplier_action" sequence="40"/>
+
+</odoo>

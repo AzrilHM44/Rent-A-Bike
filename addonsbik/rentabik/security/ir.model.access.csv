@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rentabik_kelompoksepeda,access.rentabik.kelompoksepeda,model_rentabik_kelompoksepeda,,1,1,1,1
+access_rentabik_kendaraan,access.rentabik.kendaraan,model_rentabik_kendaraan,,1,1,1,1
+access_rentabik_person,access.rentabik.person,model_rentabik_person,,1,1,1,1
+access_rentabik_kasir,access.rentabik.kasir,model_rentabik_kasir,,1,1,1,1
+access_rentabik_supplier,access.rentabik.supplier,model_rentabik_supplier,,1,1,1,1
+access_rentabik_penjualan,access.rentabik.penjualan,model_rentabik_penjualan,,1,1,1,1
+access_rentabik_detailpenjualan,access.rentabik.detailpenjualan,model_rentabik_detailpenjualan,,1,1,1,1
+access_rentabik_kendaraandatang,access.rentabik.kendaraandatang,model_rentabik_kendaraandatang,,1,1,1,1
+access_rentabik_penjualanreport,access.rentabik.penjualanreport,model_rentabik_penjualanreport,,1,1,1,1
